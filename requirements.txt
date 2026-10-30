@@ -1,0 +1,13 @@
+# Primary index: official PyTorch wheels with CUDA support
+--index-url https://download.pytorch.org/whl/cu126
+--extra-index-url https://pypi.org/simple
+
+# PyTorch with CUDA acceleration (provides the CUDA/cuDNN libraries used by CTranslate2 on Windows)
+# No NVIDIA GPU? You can install just "faster-whisper" and "av<14" and run with --device cpu.
+torch
+
+# Audio transcription with Whisper via CTranslate2
+faster-whisper
+
+# PyAV pinned: versions >= 14 removed the metadata_errors parameter used by faster-whisper 1.2.x
+av<14
